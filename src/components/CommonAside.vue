@@ -29,7 +29,6 @@
       </el-submenu>
 
     </el-menu>
-
   </div>
 </template>
 
@@ -42,7 +41,8 @@ export default {
     return {
       menuData: [
         {
-          path: '/',
+          // todo 注意这个路径
+          path: '/home',
           name: 'home',
           label: '首页',
           icon: 's-home',
@@ -117,9 +117,6 @@ export default {
     // 获取是否水平折叠收起菜单的状态数据  isCollapse为true是不展开的状态
     ...mapState('tab', ['isCollapse']),
   },
-  mounted () {
-    console.log(this.$route)
-  },
 }
 </script>
 
@@ -144,3 +141,4 @@ export default {
   }
 }
 </style>
+

@@ -3,9 +3,9 @@
     <div class="header-container">
       <div class="l-content">
         <!--控制左侧栏是否折叠-->
-        <el-button @click="handleMenu" icon="el-icon-menu" size="mini"></el-button>
+        <el-button style="margin-right: 20px" @click="handleMenu" icon="el-icon-menu" size="mini"></el-button>
         <!--面包屑-->
-        <el-breadcrumb separator="/">
+        <el-breadcrumb separator="-">
           <el-breadcrumb-item v-for="item in tabsList" :key="item.path" :to="{ path: item.path }">{{ item.label }}
           </el-breadcrumb-item>
         </el-breadcrumb>
@@ -50,9 +50,6 @@ export default {
     // 控制左侧菜单栏是否折叠
     ...mapMutations('tab', { handleMenu: 'COLLAPSE_MENU' }),
   },
-  mounted () {
-    console.log(this.tabsList)
-  },
 }
 </script>
 
@@ -76,6 +73,31 @@ export default {
       width: 40px;
       height: 40px;
       border-radius: 50%;
+    }
+  }
+
+  .l-content {
+    display: flex;
+    align-items: center;
+
+    /deep/ .el-breadcrumb__item {
+      .el-breadcrumb__inner {
+        font-weight: normal;
+        &.is-link {
+          color: #fff;
+          &:hover {
+            color: #42b983;
+          }
+        }
+      }
+      &:last-child {
+        .el-breadcrumb__inner {
+          color: #fff;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

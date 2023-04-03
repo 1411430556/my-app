@@ -40,27 +40,33 @@ const router = new VueRouter({
       children: [
         {
           // 首页
-          path: '/home',
+          path: 'home',
           name: 'home',
           component: Home,
         },
         {
           // 用户管理
-          path: '/user',
+          path: 'user',
           name: 'user',
           component: User,
         },
         {
           // 商品管理
-          path: 'mall', component: Mall,
+          path: 'mall',
+          name: 'mall',
+          component: Mall,
         },
         {
           // 页面一
-          path: 'page1', component: PageOne,
+          path: 'page1',
+          name: 'page1',
+          component: PageOne,
         },
         {
           // 页面二
-          path: 'page2', component: pageTwo,
+          path: 'page2',
+          name: 'page2',
+          component: pageTwo,
         },
       ],
     },
