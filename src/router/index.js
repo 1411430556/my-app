@@ -7,6 +7,7 @@ import Main from '@/views/Main.vue'
 import Mall from '@/views/Mall.vue'
 import PageOne from '@/views/PageOne.vue'
 import pageTwo from '@/views/PageTwo.vue'
+import Login from '@/views/Login.vue'
 
 // 在重写push|replace方法时，先把VueRouter原型对象的push|replace保存一份
 let originPush = VueRouter.prototype.push
@@ -70,6 +71,12 @@ const router = new VueRouter({
         },
       ],
     },
+    // 登录
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+    }
   ],
 })
 

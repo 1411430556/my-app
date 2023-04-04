@@ -31,5 +31,10 @@ export default {
         }
       }
     },
+    // 删除指定的tag数据
+    CLOSE_TAG (state, val) {
+      const index = state.tabsList.findIndex(item => item.name === val.name)
+      state.tabsList.splice(index, 1)
+    },
   },
 }
