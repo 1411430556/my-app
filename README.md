@@ -44,7 +44,7 @@ const aboutMe = {
 
 ## 📫 找到我
 
-[![Bilibili](https://img.shields.io/badge/Bilibili-1411430556-00A1D6?style=for-the-badge&logo=bilibili&logoColor=white)](https://space.bilibili.com/44113085)
+[![Bilibili](https://img.shields.io/badge/Bilibili-duolaameng-00A1D6?style=for-the-badge&logo=bilibili&logoColor=white)](https://space.bilibili.com/44113085)
 
 ## 📊 我的 GitHub 数据
 
